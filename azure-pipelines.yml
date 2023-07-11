@@ -23,9 +23,9 @@ steps:
     {
 - task: ServiceNow-DevOps-Server-Change-Acceleration@1,
   inputs:
-    connectedServiceName: 'DevOps Connection'
+    connectedServiceName:'DevOps Connection'
     changeRequestDetails:
-     {
+    {
     "setCloseCode" : false,
     "attributes": {
       "requested_by": {
