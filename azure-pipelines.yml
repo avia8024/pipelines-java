@@ -20,13 +20,19 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-{
-    "setCloseCode" : true,
-    "attributes": {
-      "requested_by": {
-        "name": "test user"
-      },
-      "start_date": "2021-01-05 08:00:00",
-      "end_date": "2021-01-08 08:00:00"
-    }
-  }
+    {
+-task: ServiceNow-DevOps-Server-Change-Acceleration@1,
+        inputs: 
+          connectedServiceName:'DevOps Connection',
+          changeRequestDetails: 
+            {
+                "attributes": {
+                  "requested_by": {
+                    "user_name": "abel.tuter"        
+                  },
+                   "cmdb_ci": "b4fd7c8437201000deeabfc8bcbe5dc1",
+                   "assignment_group": "a715cd759f2002002920bde8132e7018",
+                   "start_date": "2021-01-05 08:00:00",
+                   "end_date": "2021-01-08 08:00:00"
+                }
+              }
